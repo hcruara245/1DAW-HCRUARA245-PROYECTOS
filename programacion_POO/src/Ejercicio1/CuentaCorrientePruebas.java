@@ -1,4 +1,4 @@
-package Ejercicio1_Y_Ejercicio_2;
+package Ejercicio1;
 
 public class CuentaCorrientePruebas {
     public static void main(String[] args) {
