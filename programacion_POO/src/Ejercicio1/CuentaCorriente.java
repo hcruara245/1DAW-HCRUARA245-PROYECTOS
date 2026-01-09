@@ -28,8 +28,8 @@ class CuentaCorriente {
     }
 
     public void sacar_dinero (int saldo_retirar){
-        if(saldo_retirar > this.saldo){
-            System.out.println("Error: No tienes tanto dinero en la cuenta");
+        if(saldo_retirar > this.saldo || saldo_retirar < 0){
+            System.out.println("Error");
         }
         else{
             this.saldo -= saldo_retirar;
@@ -38,8 +38,13 @@ class CuentaCorriente {
     }
 
     public void ingresar_dinero(int ingreso){
-        this.saldo += ingreso;
-        System.out.println("Dinero ingresado");
+        if(ingreso < 0){
+            System.out.println("Error");
+        }
+        else {
+            this.saldo += ingreso;
+            System.out.println("Dinero ingresado");
+        }
     }
 
     public void mostrar_info(){
