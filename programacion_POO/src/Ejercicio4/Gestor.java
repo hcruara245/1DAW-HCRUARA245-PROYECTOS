@@ -1,9 +1,9 @@
 package Ejercicio4;
 
 public class Gestor {
-    private String nombre;
-    private int tlf;
-    private int importe_maximo;
+    public String nombre;
+    public final int tlf;
+    int importe_maximo;
 
     public Gestor(String nombre, int tlf, int importe_maximo){
         this.nombre = nombre;

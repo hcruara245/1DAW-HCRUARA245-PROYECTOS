@@ -5,6 +5,8 @@ public class CuentaCorriente {
     String nombre_titular;
     private int saldo;
     private String nombre_banco;
+    private Gestor gestor;
+
 
     public CuentaCorriente(String nombre_titular, String dni){
         if (dni.length() != 9){
@@ -12,6 +14,7 @@ public class CuentaCorriente {
             this.saldo = 0;
             this.nombre_titular = nombre_titular;
             this.nombre_banco = "BBVA";
+            this.gestor = new Gestor("", 0);
             System.out.println("Cuenta creada");
         }
         else if (dni.endsWith("1") || dni.endsWith("2") || dni.endsWith("3") || dni.endsWith("4") || dni.endsWith("5")
@@ -20,6 +23,7 @@ public class CuentaCorriente {
             this.saldo = 0;
             this.nombre_titular = nombre_titular;
             this.nombre_banco = "BBVA";
+            this.gestor = new Gestor("", 0);
             System.out.println("Cuenta creada");
         }
         else{
@@ -27,6 +31,7 @@ public class CuentaCorriente {
             this.nombre_titular = nombre_titular;
             this.dni = dni;
             this.nombre_banco = "BBVA";
+            this.gestor = new Gestor("", 0);
             System.out.println("Cuenta creada");
         }
     }
@@ -37,6 +42,7 @@ public class CuentaCorriente {
             this.saldo = saldo_inicial;
             this.nombre_titular = "usuario anónimo";
             this.nombre_banco = "BBVA";
+            this.gestor = new Gestor("", 0);
             System.out.println("Cuenta creada");
         }
         else if (dni.endsWith("1") || dni.endsWith("2") || dni.endsWith("3") || dni.endsWith("4") || dni.endsWith("5")
@@ -45,6 +51,7 @@ public class CuentaCorriente {
             this.saldo = saldo_inicial;
             this.nombre_titular = "usuario anónimo";
             this.nombre_banco = "BBVA";
+            this.gestor = new Gestor("", 0);
             System.out.println("Cuenta creada");
         }
         else{
@@ -52,6 +59,7 @@ public class CuentaCorriente {
             this.nombre_titular = "usuario anónimo";
             this.dni = dni;
             this.nombre_banco = "BBVA";
+            this.gestor = new Gestor("", 0);
             System.out.println("Cuenta creada");
         }
     }
@@ -62,6 +70,7 @@ public class CuentaCorriente {
             this.saldo = saldo_inicial;
             this.nombre_titular = nombre_titular;
             this.nombre_banco = "BBVA";
+            this.gestor = new Gestor("", 0);
             System.out.println("Cuenta creada");
         }
         else if (dni.endsWith("1") || dni.endsWith("2") || dni.endsWith("3") || dni.endsWith("4") || dni.endsWith("5")
@@ -70,6 +79,7 @@ public class CuentaCorriente {
             this.saldo = saldo_inicial;
             this.nombre_titular = nombre_titular;
             this.nombre_banco = "BBVA";
+            this.gestor = new Gestor("", 0);
             System.out.println("Cuenta creada");
         }
         else{
@@ -77,6 +87,7 @@ public class CuentaCorriente {
             this.nombre_titular = nombre_titular;
             this.dni = dni;
             this.nombre_banco = "BBVA";
+            this.gestor = new Gestor("", 0);
             System.out.println("Cuenta creada");
         }
     }
@@ -110,6 +121,15 @@ public class CuentaCorriente {
     }
 
     public void mostrar_info(){
-        System.out.println(this.dni + " | " + this.nombre_titular + " | " + this.saldo + "€");
+        System.out.println("INFO:" + this.dni + " | " + this.nombre_titular + " | " + this.saldo + "€");
+        System.out.println("GESTOR:" + this.gestor.nombre + " | " + this.gestor.tlf);
+    }
+
+    public Gestor getGestor() {
+        return this.gestor;
+    }
+
+    public void setGestor(Gestor gestor) {
+        this.gestor = gestor;
     }
 }
