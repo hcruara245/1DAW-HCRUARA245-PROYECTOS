@@ -46,8 +46,12 @@ public class Agenda {
         }
     }
 
+    //ORDENAR CONTACTOS POR NOMBRE, PARA HACERLO CON TELEFONOS
+    //HAY QUE PASARLE OTRO PARAMETRO Y UNA CONDICIÓN, EN FUNCIÓN
+    //A EL PARAMETRO HACE UNA COSA U OTRA
     void ordenar_agenda(Agenda agenda){
         Arrays.sort(agenda.contactos, (c1, c2) -> c1.nombre.compareTo(c2.nombre));
+        //Arrays.sort(agenda.contactos, (c1, c2) -> c1.telefono.compareTo(c2.telefono));
     }
 
      boolean comprobarContacto(Contacto[] contactos, Contacto c){
