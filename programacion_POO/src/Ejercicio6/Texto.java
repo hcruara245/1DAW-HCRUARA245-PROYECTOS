@@ -72,7 +72,9 @@ public class Texto {
         for (int i = 0; i < copia_cadena.length(); i++){
             if (copia_cadena.charAt(i) == 'A' || copia_cadena.charAt(i) == 'E'
                     || copia_cadena.charAt(i) == 'I' || copia_cadena.charAt(i) == 'O'
-                    || copia_cadena.charAt(i) == 'U'){
+                    || copia_cadena.charAt(i) == 'U' || copia_cadena.charAt(i) == 'Á'
+                    || copia_cadena.charAt(i) == 'É' || copia_cadena.charAt(i) == 'Í'
+                    || copia_cadena.charAt(i) == 'Ó' || copia_cadena.charAt(i) == 'Ú'){
                 vocales++;
             }
         }
