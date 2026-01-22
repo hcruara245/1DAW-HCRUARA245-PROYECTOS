@@ -1,12 +1,12 @@
-package Ejercicio9;
+package Ejercicio9_y_10.Personal;
 
-public class Maquinistas {
+public class Maquinista {
     private String nombre;
     private String DNI;
     private double sueldo;
     private String rango;
 
-    public Maquinistas(String nombre, String DNI, double sueldo, String rango) {
+    public Maquinista(String nombre, String DNI, double sueldo, String rango) {
         this.nombre = nombre;
         this.DNI = DNI;
         this.sueldo = sueldo;

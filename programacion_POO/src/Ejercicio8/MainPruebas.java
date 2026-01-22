@@ -8,17 +8,17 @@ public class MainPruebas {
         b1.encender();
         b2.encender();
         b3.encender();
-        System.out.println(b1.estaEncendida());
-        System.out.println(b2.estaEncendida());
-        System.out.println(b3.estaEncendida());
-        Bombilla.setInterruptorGeneralEncendido(false);
-        System.out.println(b1.estaEncendida());
-        Bombilla.setInterruptorGeneralEncendido(true);
-        System.out.println(b1.estaEncendida());
-        System.out.println(b2.estaEncendida());
-        System.out.println(b3.estaEncendida());
+        System.out.println(b1.isbombillaEncendida());
+        System.out.println(b2.isbombillaEncendida());
+        System.out.println(b3.isbombillaEncendida());
+        Bombilla.setInterruptorGeneralEncendido();
+        System.out.println(b1.isbombillaEncendida());
+        Bombilla.setInterruptorGeneralEncendido();
+        System.out.println(b1.isbombillaEncendida());
+        System.out.println(b2.isbombillaEncendida());
+        System.out.println(b3.isbombillaEncendida());
         b1.apagar();
-        System.out.println(b1.estaEncendida());
-        System.out.println(b2.estaEncendida());
+        System.out.println(b1.isbombillaEncendida());
+        System.out.println(b2.isbombillaEncendida());
     }
 }

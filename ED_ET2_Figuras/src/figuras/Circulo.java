@@ -8,11 +8,18 @@ public abstract class Circulo extends Figura{
         this.radio = radio;
     }
     
+    @Override
     public float calcularPerimetro(){
         return 2 * (float) Math.PI * radio;
     }
     
+    @Override
     public float calcularArea(){
         return (float) Math.PI * radio * radio;
+    }
+    
+    @Override
+    public void paint(Graphics g, int width, int height) {
+        g.drawOval((width - radio) / 2, (height - radio) / 2, radio, radio);
     }
 }
