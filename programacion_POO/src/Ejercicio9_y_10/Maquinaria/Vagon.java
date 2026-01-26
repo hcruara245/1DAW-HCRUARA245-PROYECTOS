@@ -6,7 +6,7 @@ public class Vagon {
     private double carga_actual;
     private String tipo_mercancia;
 
-    Vagon(int identificador, double carga_maxima, double carga_actual, String tipo_mercancia) {
+    public Vagon(int identificador, double carga_maxima, double carga_actual, String tipo_mercancia) {
         if (carga_actual > carga_maxima){
             System.out.println("ERROR: El vagón no puede superar la Masa Máxima Autorizada");
         }
