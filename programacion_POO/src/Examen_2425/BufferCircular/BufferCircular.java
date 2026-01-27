@@ -19,7 +19,7 @@ public class BufferCircular {
                 insertado = true;
                 posicion++;
                 this.masAntiguo = posicion;
-            } else if (posicion == numerosBuffer.length && masAntiguo == numerosBuffer.length) { // Buffer lleno, se sobrescribe el más antiguo
+            } else if (posicion == numerosBuffer.length) { // Buffer lleno, se sobrescribe el más antiguo
                 posicion = 0;
                 numerosBuffer[posicion] = numero;
                 insertado = true;
@@ -40,5 +40,26 @@ public class BufferCircular {
         this.masAntiguo++;
 
         return masAntiguo;
+    }
+
+    void mostrarBuffer(){
+        System.out.println("______________________________");
+        System.out.print("| ");
+        for (int i = 0; i < this.numerosBuffer.length;i++){
+            System.out.print(this.numerosBuffer[i] +" ");
+        }
+        System.out.println(" |");
+    }
+
+    int estadoBuffer(){
+        int estadoBuffer = 0;
+
+        for (int i = 0; i < this.numerosBuffer.length; i++){
+            if(this.numerosBuffer[i] != null){
+                estadoBuffer += 10;
+            }
+        }
+
+        return estadoBuffer;
     }
 }
