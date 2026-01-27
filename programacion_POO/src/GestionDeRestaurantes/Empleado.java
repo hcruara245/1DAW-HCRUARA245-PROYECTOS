@@ -10,12 +10,47 @@ public class Empleado {
     private LocalDate contratacion;
     private tipoEmpleado tipoEmpleado;
 
-    public Empleado(String nombreCompleto, int tlf, LocalDate contratacion, GestionDeRestaurantes.tipoEmpleado tipoEmpleado) {
+    public Empleado(String nombreCompleto, int tlf, LocalDate contratacion,tipoEmpleado tipoEmpleado) {
         this.nombreCompleto = nombreCompleto;
         this.tlf = tlf;
         this.contratacion = contratacion;
         this.tipoEmpleado = tipoEmpleado;
         this.idEmpleado = contadorEmpleados;
         contadorEmpleados++;
+    }
+    public Empleado(String nombreCompleto, int tlf, LocalDate contratacion){
+        this(nombreCompleto, tlf, contratacion, GestionDeRestaurantes.tipoEmpleado.camarero);
+    }
+
+    void mostrarDatosEmpleado(){
+        System.out.println("ID del empleado: " + this.idEmpleado);
+        System.out.println("Nombre del Empleado: " + this.nombreCompleto);
+        System.out.println("Tlf del Empleado: " + this.tlf);
+        System.out.println("Contratacion del Empleado: " + this.contratacion);
+        System.out.println("Tipo del Empleado: " + this.tipoEmpleado);
+    }
+
+    void mostrarCantidadEmpleados(){
+        System.out.println("Cantidad de empleados: " + contadorEmpleados);
+    }
+
+    public int getIdEmpleado() {
+        return idEmpleado;
+    }
+
+    public String getNombreCompleto() {
+        return nombreCompleto;
+    }
+
+    public int getTlf() {
+        return tlf;
+    }
+
+    public LocalDate getContratacion() {
+        return contratacion;
+    }
+
+    public tipoEmpleado getTipoEmpleado() {
+        return tipoEmpleado;
     }
 }
