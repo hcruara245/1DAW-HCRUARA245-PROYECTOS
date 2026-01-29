@@ -78,6 +78,7 @@ public class Catalogo {
 
     private Pelicula[] buscarPorTitulo(String titulo){
         Pelicula[] peliculasEncontradas = new Pelicula[0];
+
         for(int i = 0; i < this.peliculas.length; i++){
             if (peliculas[i].getTitulo().trim().toUpperCase().contains(titulo.trim().toUpperCase())) {
                 peliculasEncontradas = Arrays.copyOf(peliculasEncontradas, peliculasEncontradas.length + 1);
