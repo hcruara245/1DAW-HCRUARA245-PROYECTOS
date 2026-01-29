@@ -97,4 +97,36 @@ public class Restaurante {
             this.empleados[i].mostrarDatosEmpleado();
         }
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Empleado[] getEmpleados() {
+        return empleados;
+    }
+
+    public void setEmpleados(Empleado[] empleados) {
+        this.empleados = empleados;
+    }
+
+    public Plato[] getPlatos() {
+        return platos;
+    }
+
+    public void setPlatos(Plato[] platos) {
+        this.platos = platos;
+    }
+
+    public static String getCadena() {
+        return cadena;
+    }
+
+    public static void setCadena(String cadena) {
+        Restaurante.cadena = cadena;
+    }
 }

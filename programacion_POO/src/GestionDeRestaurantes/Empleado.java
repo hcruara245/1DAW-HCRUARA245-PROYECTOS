@@ -53,4 +53,32 @@ public class Empleado {
     public tipoEmpleado getTipoEmpleado() {
         return tipoEmpleado;
     }
+
+    public void setNombreCompleto(String nombreCompleto) {
+        this.nombreCompleto = nombreCompleto;
+    }
+
+    public static int getContadorEmpleados() {
+        return contadorEmpleados;
+    }
+
+    public static void setContadorEmpleados(int contadorEmpleados) {
+        Empleado.contadorEmpleados = contadorEmpleados;
+    }
+
+    public void setIdEmpleado(int idEmpleado) {
+        this.idEmpleado = idEmpleado;
+    }
+
+    public void setTlf(int tlf) {
+        this.tlf = tlf;
+    }
+
+    public void setContratacion(LocalDate contratacion) {
+        this.contratacion = contratacion;
+    }
+
+    public void setTipoEmpleado(GestionDeRestaurantes.tipoEmpleado tipoEmpleado) {
+        this.tipoEmpleado = tipoEmpleado;
+    }
 }
