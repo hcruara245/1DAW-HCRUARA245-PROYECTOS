@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8b48ab2-9ede-49d5-bd0b-22d2984d5126" name="Changes" comment="" />
+    <list default="true" id="c8b48ab2-9ede-49d5-bd0b-22d2984d5126" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Practica_1_Depuracion_Proyectos/src/Aleatorios/Aleatorios.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Practica_1_Depuracion_Proyectos/src/Arrays/depuraArrays.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Practica_1_Depuracion_Proyectos/src/Bisiestos/AniosBisiestos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Practica_1_Depuracion_Proyectos/src/Matrices/depuraMatrices.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,34 +15,34 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "hcruara245"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;hcruara245&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/hcruara245/1DAW-HCRUARA245-PROYECTOS.git",
-    "accountId": "dfdf3b7d-06ee-420f-a765-93b7241b7727"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/hcruara245/1DAW-HCRUARA245-PROYECTOS.git&quot;,
+    &quot;accountId&quot;: &quot;dfdf3b7d-06ee-420f-a765-93b7241b7727&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="381IYUNPcFusyss8eexbzFGvzQP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="1DAW-HCRUARA245-PROYECTOS" />
