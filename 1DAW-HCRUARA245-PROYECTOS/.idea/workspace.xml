@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8b48ab2-9ede-49d5-bd0b-22d2984d5126" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Practica_1_Depuracion_Proyectos/src/Aleatorios/Aleatorios.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Practica_1_Depuracion_Proyectos/src/Arrays/depuraArrays.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Practica_1_Depuracion_Proyectos/src/Bisiestos/AniosBisiestos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Practica_1_Depuracion_Proyectos/src/Matrices/depuraMatrices.java" afterDir="false" />
-    </list>
+    <list default="true" id="c8b48ab2-9ede-49d5-bd0b-22d2984d5126" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
