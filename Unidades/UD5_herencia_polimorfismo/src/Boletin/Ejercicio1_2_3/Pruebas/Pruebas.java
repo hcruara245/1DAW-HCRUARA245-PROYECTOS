@@ -1,6 +1,6 @@
-package Boletin.Ejercicio1y2.Pruebas;
+package Boletin.Ejercicio1_2_3.Pruebas;
 
-import Boletin.Ejercicio1y2.HoraExacta;
+import Boletin.Ejercicio1_2_3.HoraExacta;
 
 public class Pruebas {
     public static void main(String[] args) {

@@ -1,4 +1,8 @@
 package Ejemplos;
 
-public class Vehiculo {
+public abstract class Vehiculo {
+    String marca;
+    String modelo;
+
+    abstract void arrancar();
 }

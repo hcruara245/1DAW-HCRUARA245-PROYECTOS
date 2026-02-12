@@ -1,4 +1,4 @@
 package Ejemplos;
 
-public class Con_motor {
+public abstract class Con_motor extends Vehiculo{
 }

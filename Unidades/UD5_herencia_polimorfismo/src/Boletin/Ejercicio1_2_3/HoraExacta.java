@@ -1,4 +1,4 @@
-package Boletin.Ejercicio1y2;
+package Boletin.Ejercicio1_2_3;
 
 public class HoraExacta extends Hora {
     private int segundos;

@@ -1,4 +1,4 @@
 package Ejemplos;
 
-public class Bici {
+public class Bici extends Sin_motor{
 }
