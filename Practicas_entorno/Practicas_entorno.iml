@@ -8,6 +8,9 @@
     <orderEntry type="jdk" jdkName="20" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="ED_ET2_Figuras" />
+<<<<<<< HEAD
     <orderEntry type="module" module-name="ED_ET2_Figuras" />
+=======
+>>>>>>> 8b8ea950ec9b3e6ab7864b7c0175bf9efea1ea49
   </component>
 </module>
