@@ -8,13 +8,14 @@ package Practica1_depuracion;/*
  * @author losad
  */
 public class depuraMatrices {
-    
+
     public static void main(String[] parametros) {
         int m [] [] = {{1,2},{3,4},{5,6}};
         m = func1 (m);
         func2(m);
+        pintarMatriz(m);
     }
-    
+
    public static int[][] func1 (int m [] []){
        int [][] matriz = new int [3][2];
        int i=0;
@@ -28,12 +29,21 @@ public class depuraMatrices {
         }
        return matriz;
    }
-    
+
    public static void func2 (int matriz [] []){
        for (int i = 0; i<matriz.length; i++) {
-            for (int j = 0; j< matriz.length;j++){
+            for (int j = 0; j< matriz[i].length;j++){
                 matriz [i][j] = matriz [i][j] * matriz [i][j];
             }
         }
    }
+
+    public static void pintarMatriz (int [][] matriz){
+        for (int i = 0; i<matriz.length; i++) {
+            for (int j = 0; j<matriz[i].length;j++){
+                System.out.print(matriz [i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
 }
