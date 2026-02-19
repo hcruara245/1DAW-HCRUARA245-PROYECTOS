@@ -9,27 +9,30 @@ package ED_UD5_DEPURACION;
  * @author losad
  */
 public class EJ3_DepuraFunciones {
- 
+
     public static void main(String[] parametros) {
-         int i=0;
-         while(i<100) {
+        int i=0;
+        while(i<100) {
             if(i%2==0) {
                 if (i> 50){
-                   funcion1(i);
+                    funcion1(i);
                 }else{
-                   funcion2(i);
+                    funcion2(i);
                 }
             } else {
                 if (i < 50){
-                   funcion1(i);
+                    funcion1(i);
                 }else{
-                   funcion2(i);
+                    funcion3(i);
                 }
             }
             i++;
-         }
+        }
     }
 
+    private static void funcion3(int i) {
+        escribirNumero("Soy impar mayor de 50 con valor i=" + i + " y mi resultado es ", 2*i);
+    }
     private static void funcion1(int i) {
         escribirNumero("El valor de la función 1 para i=" + i + " es ", i);
     }
