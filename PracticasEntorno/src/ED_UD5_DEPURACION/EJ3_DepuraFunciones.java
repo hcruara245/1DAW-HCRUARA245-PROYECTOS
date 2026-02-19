@@ -31,7 +31,7 @@ public class EJ3_DepuraFunciones {
     }
 
     private static void funcion1(int i) {
-       escribirNumero("El valor de la función 1 para i=" + i + " es ", i);
+        escribirNumero("El valor de la función 1 para i=" + i + " es ", i);
     }
 
     private static void funcion2(int i) {
