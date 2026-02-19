@@ -1,7 +1,6 @@
 package ED_T2_AppFiguras.src;
 
-import figuras.Circulo;
-import figuras.Figura;
+import ED_ET2_Figuras.src.figuras.*;
 import javax.swing.*;
 import java.awt.*;
 
