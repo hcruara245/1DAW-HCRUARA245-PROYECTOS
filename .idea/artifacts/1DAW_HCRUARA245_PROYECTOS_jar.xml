@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="1DAW-HCRUARA245-PROYECTOS:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/1DAW_HCRUARA245_PROYECTOS_jar</output-path>
+    <root id="archive" name="1DAW-HCRUARA245-PROYECTOS.jar">
+      <element id="module-output" name="1DAW-HCRUARA245-PROYECTOS" />
+    </root>
+  </artifact>
+</component>

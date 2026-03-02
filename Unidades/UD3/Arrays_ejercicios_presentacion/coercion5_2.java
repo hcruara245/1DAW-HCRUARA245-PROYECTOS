@@ -2,7 +2,7 @@ package ejercicios_presentacion;
 
 import java.util.Scanner;
 
-public class ejercicio5_2 {
+public class coercion5_2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         

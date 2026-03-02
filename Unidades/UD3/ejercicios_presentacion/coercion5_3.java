@@ -2,7 +2,7 @@ package ejercicios_presentacion;
 
 import java.util.Scanner;
 
-public class ejercicio5_3 {
+public class coercion5_3 {
     public static void main(String[] args) {
         int num = numerosIntroducir();        
         int[] arrayEnteros = new int [num];
