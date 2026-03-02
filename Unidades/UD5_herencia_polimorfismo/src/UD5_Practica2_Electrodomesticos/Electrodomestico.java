@@ -1,6 +1,6 @@
 package UD5_Practica2_Electrodomesticos;
 
-public abstract class Electrodomestico {
+public abstract class Electrodomestico implements Comparable{
     protected double precio_base;
     protected Color color;
     protected ConsumoEnergetico consumo_energetico;
@@ -97,5 +97,17 @@ public abstract class Electrodomestico {
                 ", color=" + color +
                 ", consumo_energetico=" + consumo_energetico +
                 ", peso=" + peso + '}';
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Electrodomestico electrodomestico = (Electrodomestico) o;
+
+        if (this.precio_base < electrodomestico.precio_base) {
+            return -1;
+        } else if (this.precio_base > electrodomestico.precio_base) {
+            return 1;
+        }
+        return 0;
     }
 }
