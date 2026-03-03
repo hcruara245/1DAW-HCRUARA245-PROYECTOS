@@ -2,14 +2,12 @@ package UD5_Practica1_COAC;
 
 import java.util.Arrays;
 
-public class Cuarteto extends AgrupacionOficial {
+public class Cuarteto extends AgrupacionOficial implements Callejera {
     private int numMiembros;
-    private int puntosObtenidos;
 
     public Cuarteto(String nombre, String autor, String autorMusica, String autorLetra, String tipoDisfraz, int numMiembros, int puntosObtenidos) {
         super(nombre, autor, autorMusica, autorLetra, tipoDisfraz);
         this.numMiembros = numMiembros;
-        this.puntosObtenidos = puntosObtenidos;
     }
 
     @Override
@@ -31,7 +29,7 @@ public class Cuarteto extends AgrupacionOficial {
     public String toString() {
         return "Cuarteto{" +
                 "numMiembros=" + numMiembros +
-                ", puntosObtenidos=" + puntosObtenidos +
+                ", puntosObtenidos=" + puntos +
                 ", integrantes=" + Arrays.toString(integrantes) +
                 ", nombre='" + nombre + '\'' +
                 ", autor='" + autor + '\'' +
@@ -39,5 +37,18 @@ public class Cuarteto extends AgrupacionOficial {
                 ", autorLetra='" + autorLetra + '\'' +
                 ", tipoDisfraz='" + tipoDisfraz + '\'' +
                 '}';
+    }
+
+    @Override
+    public void amo_a_escucha() {
+        System.out.println("AMO A ESCUCHA LA CHIRIGOTA " + super.nombre);
+    }
+
+    @Override
+    public int compare(Object o1, Object o2) {
+        Cuarteto c1 = (Cuarteto) o1;
+        Cuarteto c2 = (Cuarteto) o2;
+
+        return c1.compareTo(c2);
     }
 }

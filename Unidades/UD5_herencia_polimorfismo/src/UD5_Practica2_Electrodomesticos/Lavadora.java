@@ -1,6 +1,8 @@
 package UD5_Practica2_Electrodomesticos;
 
-public class Lavadora extends Electrodomestico{
+import java.util.Comparator;
+
+public class Lavadora extends Electrodomestico implements Comparable, Comparator {
     private double carga;
 
     public Lavadora(double precio_base, Color color, ConsumoEnergetico consumo_energetico, double peso, double carga) {
@@ -49,4 +51,17 @@ public class Lavadora extends Electrodomestico{
                 '}';
     }
 
+    @Override
+    public int compareTo(Object o) {
+        Lavadora other = (Lavadora) o;
+        return ((int) (this.carga - other.carga));
+    }
+
+    @Override
+    public int compare(Object o1, Object o2) {
+        Lavadora lav1 = (Lavadora) o1;
+        Lavadora lav2 = (Lavadora) o2;
+
+        return lav1.compareTo(lav2);
+    }
 }

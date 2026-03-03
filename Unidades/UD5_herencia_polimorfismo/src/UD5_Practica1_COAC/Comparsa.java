@@ -4,12 +4,10 @@ import java.util.Arrays;
 
 public class Comparsa extends AgrupacionOficial {
     private String empresaAtrezzo;
-    private int puntosObtenidos;
 
     public Comparsa(String nombre, String autor, String autorMusica, String autorLetra, String tipoDisfraz, String empresaAtrezzo, int puntosObtenidos) {
         super(nombre, autor, autorMusica, autorLetra, tipoDisfraz);
         this.empresaAtrezzo = empresaAtrezzo;
-        this.puntosObtenidos = puntosObtenidos;
     }
 
     @Override
@@ -31,7 +29,7 @@ public class Comparsa extends AgrupacionOficial {
     public String toString() {
         return "Comparsa{" +
                 "empresaAtrezzo='" + empresaAtrezzo + '\'' +
-                ", puntosObtenidos=" + puntosObtenidos +
+                ", puntosObtenidos=" + puntos +
                 ", integrantes=" + Arrays.toString(integrantes) +
                 ", nombre='" + nombre + '\'' +
                 ", autor='" + autor + '\'' +
@@ -39,5 +37,13 @@ public class Comparsa extends AgrupacionOficial {
                 ", autorLetra='" + autorLetra + '\'' +
                 ", tipoDisfraz='" + tipoDisfraz + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compare(Object o1, Object o2) {
+        Comparsa c1 = (Comparsa) o1;
+        Comparsa c2 = (Comparsa) o2;
+
+        return c1.compareTo(c2);
     }
 }

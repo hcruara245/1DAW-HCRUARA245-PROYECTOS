@@ -4,10 +4,12 @@ import java.util.Arrays;
 
 public abstract class AgrupacionOficial extends Agrupacion{
     protected Integrante[] integrantes;
+    protected int puntos;
 
     public AgrupacionOficial(String nombre, String autor, String autorMusica, String autorLetra, String tipoDisfraz) {
         super(nombre, autor, autorMusica, autorLetra, tipoDisfraz);
         this.integrantes = new Integrante[0];
+        this.puntos = 0;
     }
 
     protected abstract void cantar_la_presentacion();
@@ -41,5 +43,13 @@ public abstract class AgrupacionOficial extends Agrupacion{
                 ", autorLetra='" + autorLetra + '\'' +
                 ", tipoDisfraz='" + tipoDisfraz + '\'' +
                 '}';
+    }
+
+    public void incrementarPuntos(int puntos){
+        this.puntos += puntos;
+    }
+
+    public int getPuntos() {
+        return puntos;
     }
 }

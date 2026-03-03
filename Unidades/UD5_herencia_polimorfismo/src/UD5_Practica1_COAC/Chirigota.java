@@ -1,8 +1,10 @@
 package UD5_Practica1_COAC;
 
+import Ejemplos.ComparableYComparator.Coche;
+
 import java.util.Arrays;
 
-public class Chirigota extends AgrupacionOficial {
+public class Chirigota extends AgrupacionOficial implements Callejera {
     private int numCuples;
 
     public Chirigota(String nombre, String autor, String autorMusica, String autorLetra, String tipoDisfraz, int numCuples) {
@@ -36,5 +38,18 @@ public class Chirigota extends AgrupacionOficial {
                 ", autorLetra='" + autorLetra + '\'' +
                 ", tipoDisfraz='" + tipoDisfraz + '\'' +
                 '}';
+    }
+
+    @Override
+    public void amo_a_escucha() {
+        System.out.println("AMO A ESCUCHA LA CHIRIGOTA " + super.nombre);
+    }
+
+    @Override
+    public int compare(Object o1, Object o2) {
+        Chirigota c1 = (Chirigota) o1;
+        Chirigota c2 = (Chirigota) o2;
+
+        return c1.compareTo(c2);
     }
 }

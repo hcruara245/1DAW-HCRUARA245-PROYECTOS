@@ -31,4 +31,19 @@ public class COAC {
     public String toString() {
         return "COAC{" + "agrupacionOficiales=" + Arrays.toString(agrupacionOficiales) +'}';
     }
+
+    void ordenar_por_puntos(){
+        ComparadorPuntos comp = new ComparadorPuntos();
+
+        Arrays.sort(this.agrupacionOficiales, comp);
+    }
+
+    void ordenar_por_nombre(){
+        Arrays.sort(this.agrupacionOficiales);
+    }
+
+    void ordenar_por_autor(){
+        ComparadorAutor comp = new ComparadorAutor();
+        Arrays.sort(this.agrupacionOficiales, comp);
+    }
 }

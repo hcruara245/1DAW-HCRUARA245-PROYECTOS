@@ -2,7 +2,7 @@ package UD5_Practica1_COAC;
 
 import java.util.Arrays;
 
-public class Romancero extends Agrupacion{
+public class Romancero extends Agrupacion implements Callejera{
     private String tematicaCartelon;
 
     public Romancero(String tematicaCartelon,String nombre, String autor, String autorMusica, String autorLetra, String tipoDisfraz) {
@@ -31,5 +31,18 @@ public class Romancero extends Agrupacion{
                 ", autorLetra='" + autorLetra + '\'' +
                 ", tipoDisfraz='" + tipoDisfraz + '\'' +
                 '}';
+    }
+
+    @Override
+    public void amo_a_escucha() {
+        System.out.println("AMO A ESCUCHA LA CHIRIGOTA " + super.nombre);
+    }
+
+    @Override
+    public int compare(Object o1, Object o2) {
+        Romancero c1 = (Romancero) o1;
+        Romancero c2 = (Romancero) o2;
+
+        return c1.compareTo(c2);
     }
 }

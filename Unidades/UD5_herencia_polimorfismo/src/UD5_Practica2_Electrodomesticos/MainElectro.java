@@ -48,7 +48,18 @@ public class MainElectro{
         for (Lavadora lav : listaLavadoras) {
             System.out.println("Lavadora - Precio: " + lav.getPrecio_base() + " - Carga: " + lav.getCarga());
         }
+        Lavadora lavadoras[] = new Lavadora[5];
+        lavadoras[0] = new Lavadora(300, Color.blanco, ConsumoEnergetico.C, 40, 8);
+        lavadoras[1] = new Lavadora(150, Color.azul, ConsumoEnergetico.F, 30, 5);
+        lavadoras[2] = new Lavadora(250, Color.gris, ConsumoEnergetico.A, 50, 20);
+        lavadoras[3] = new Lavadora(150, Color.azul, ConsumoEnergetico.F, 300, 5);
+        lavadoras[4] = new Lavadora(400, Color.gris, ConsumoEnergetico.A, 12, 15);
+
+        Arrays.sort(lavadoras);
+        System.out.println(Arrays.toString(lavadoras));
+
+        ComparaPrecioFinal comp = new ComparaPrecioFinal();
+        Arrays.sort(lavadoras,comp);
+        System.out.println(Arrays.toString(lavadoras));
     }
-
-
 }

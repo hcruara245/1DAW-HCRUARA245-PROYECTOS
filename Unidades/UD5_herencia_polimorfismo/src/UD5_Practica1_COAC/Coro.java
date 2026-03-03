@@ -5,13 +5,11 @@ import java.util.Arrays;
 public class Coro extends AgrupacionOficial {
     private int numBandurrias;
     private int numGuitarras;
-    private int puntosObtenidos;
 
     public Coro(String nombre, String autor, String autorMusica, String autorLetra, String tipoDisfraz, int numBandurrias, int numGuitarras, int puntosObtenidos) {
         super(nombre, autor, autorMusica, autorLetra, tipoDisfraz);
         this.numBandurrias = numBandurrias;
         this.numGuitarras = numGuitarras;
-        this.puntosObtenidos = puntosObtenidos;
     }
 
     @Override
@@ -34,7 +32,7 @@ public class Coro extends AgrupacionOficial {
         return "Coro{" +
                 "numBandurrias=" + numBandurrias +
                 ", numGuitarras=" + numGuitarras +
-                ", puntosObtenidos=" + puntosObtenidos +
+                ", puntosObtenidos=" + puntos +
                 ", integrantes=" + Arrays.toString(integrantes) +
                 ", nombre='" + nombre + '\'' +
                 ", autor='" + autor + '\'' +
@@ -42,5 +40,13 @@ public class Coro extends AgrupacionOficial {
                 ", autorLetra='" + autorLetra + '\'' +
                 ", tipoDisfraz='" + tipoDisfraz + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compare(Object o1, Object o2) {
+        Coro c1 = (Coro) o1;
+        Coro c2 = (Coro) o2;
+
+        return c1.compareTo(c2);
     }
 }

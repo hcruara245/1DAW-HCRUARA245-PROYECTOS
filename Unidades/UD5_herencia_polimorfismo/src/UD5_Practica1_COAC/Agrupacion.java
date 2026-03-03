@@ -1,8 +1,9 @@
 package UD5_Practica1_COAC;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
-public abstract class Agrupacion {
+public abstract class Agrupacion implements Comparable, Comparator {
     protected String nombre;
     protected String autor;
     protected String autorMusica;
@@ -35,5 +36,16 @@ public abstract class Agrupacion {
 
     public static int getAgrupCreadas() {
         return agrupCreadas;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Agrupacion other = (Agrupacion) o;
+
+        return this.nombre.compareTo(other.nombre);
     }
 }
