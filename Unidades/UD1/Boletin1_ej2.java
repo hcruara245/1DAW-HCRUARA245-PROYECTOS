@@ -2,7 +2,7 @@ package adivina_el_numero;
 
 import java.util.Scanner;
 
-public class Boletin2_ej2 {
+public class Boletin1_ej2 {
     
     
     public static void main(String[] args) {
