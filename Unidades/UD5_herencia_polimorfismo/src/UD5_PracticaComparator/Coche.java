@@ -2,37 +2,46 @@ package UD5_PracticaComparator;
 
 public class Coche extends Vehiculo {
     private String matricula;
+    private Tomador tomador;
 
-    public Coche(String marca, String modelo, String matricula) {
+    public Coche(String marca, String modelo, String matricula, Tomador tomador) {
         super(marca, modelo);
         this.matricula = matricula;
+        this.tomador = tomador;
     }
 
-    public Coche(String marca, String modelo) {
+    public Coche(String marca, String modelo, Tomador tomador) {
         super(marca, modelo);
         this.matricula = null;
+        this.tomador = tomador;
     }
 
-    public Coche() {
+    public Coche(Tomador tomador) {
         this.matricula = null;
+        this.tomador = tomador;
     }
 
     @Override
     public int compareTo(Object o) {
-        Coche other = (Coche) o;
         int res=0;
 
-        if (this.matricula == null && other.matricula == null) {
-            res = super.compareTo(other);
-        }
-        else if (other.matricula == null){
-            res = -1;
-        }
-        else if (this.matricula == null){
-            res = 1;
+        if (o instanceof Coche){
+            Coche other = (Coche) o;
+            if (this.matricula == null && other.matricula == null) {
+                res = super.compareTo(other);
+            }
+            else if (other.matricula == null){
+                res = -1;
+            }
+            else if (this.matricula == null){
+                res = 1;
+            }
+            else {
+                res = this.matricula.compareTo(other.matricula);
+            }
         }
         else {
-            res = this.matricula.compareTo(other.matricula);
+            res = super.compareTo(o);
         }
 
         return res;
@@ -44,6 +53,11 @@ public class Coche extends Vehiculo {
                 "matricula='" + matricula + '\'' +
                 ", marca='" + marca + '\'' +
                 ", modelo='" + modelo + '\'' +
+                ", tomador='" + tomador + '\'' +
                 ')';
+    }
+
+    public Tomador getTomador() {
+        return tomador;
     }
 }

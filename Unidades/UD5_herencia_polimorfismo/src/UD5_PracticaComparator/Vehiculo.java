@@ -1,6 +1,6 @@
 package UD5_PracticaComparator;
 
-public abstract class Vehiculo implements Comparable{
+public class Vehiculo implements Comparable{
     protected String marca;
     protected String modelo;
 

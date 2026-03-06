@@ -1,39 +1,48 @@
 package UD5_Practica3_Minecraft;
 
-import UD5_Practica2_Electrodomesticos.Electrodomestico;
-
-public class Minecraft{
-    private Material[] materiales = new Material[10];
+public class Minecraft {
+    Material[] materials = new Material[10];
 
     public void anadirMaterial(Material material){
-        for (int i = 0; i < this.materiales.length; i++){
-            if (this.materiales[i] == null){
-                this.materiales[i] = material;
-                i = this.materiales.length - 1;
+        boolean anadido = false;
+        for (int i = 0; i < this.materials.length && !anadido; i++){
+            if (this.materials[i] == null){
+                this.materials[i] = material;
+                anadido = true;
             }
+        }
+
+        if (!anadido){
+            System.out.println("No se ha podido añadir");
         }
     }
 
     public void borrarMaterialSinMasa(){
-        for (int i = 0; i < this.materiales.length;i++){
-            if (this.materiales[i].getMasa() <= 0){
-                this.materiales[i] = null;
+        for (int i = 0; i < this.materials.length; i++){
+            if (this.materials[i].masa <= 0){
+                this.materials[i] = null;
             }
         }
     }
 
     public void mostrarEstado(){
-        for (int i = 0; i < this.materiales.length; i++){
-            if (this.materiales[i] != null){
-                System.out.println(this.materiales[i].toString());
+        for (int i = 0; i < this.materials.length; i++){
+            if (this.materials[i] != null){
+                System.out.println(this.materials[i].toString());
             }
             else {
-                System.out.println("VACIO");
+                System.out.println("POSICIÓN " + (i + 1) + " VACIA");
             }
         }
     }
 
-    public Material[] getMateriales() {
-        return materiales;
+    public void ultimoMaterialSinMasa(){
+        boolean encontrado = false;
+        for (int i = 0; i < this.materials.length || !encontrado; i++){
+            if (this.materials[i].masa <= 0){
+                System.out.println(this.materials[i].toString());
+                encontrado = true;
+            }
+        }
     }
 }

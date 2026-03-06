@@ -1,54 +1,33 @@
 package UD5_Practica3_Minecraft;
 
-import UD5_Practica2_Electrodomesticos.Electrodomestico;
+public abstract class Material implements Comparable{
+    protected String nombre;
+    protected int masa;
+    protected int capQuemarse;
+    protected int capDiluirse;
+    protected boolean movible;
 
-public class Material implements Comparable{
-    private String nombre;
-    private int masa;
-    private int capacidadQuemarse;
-    private int capacidadDiluirse;
-    private boolean movible;
-
-    public Material(String nombre, int masa, int capacidadQuemarse, boolean movible, int capacidadDiluirse) {
+    public Material(String nombre, int masa, int capQuemarse, int capDiluirse, boolean movible) {
         this.nombre = nombre;
-        if (masa <= 0 || masa > 1000){
+        if (masa < 0 || masa > 1000){
             this.masa = 1;
         }
         else {
             this.masa = masa;
         }
-        if (capacidadQuemarse <= 0 || capacidadQuemarse > 100){
-            this.capacidadQuemarse = 1;
+        if (capQuemarse < 0 || capQuemarse > 100){
+            this.capQuemarse = 1;
         }
         else {
-            this.capacidadQuemarse = capacidadQuemarse;
+            this.capQuemarse = capQuemarse;
         }
-        if (capacidadDiluirse <= 0 || capacidadDiluirse > 100){
-            this.capacidadDiluirse = 1;
+        if (capDiluirse < 0 || capDiluirse > 100){
+            this.capDiluirse = 1;
         }
         else {
-            this.capacidadDiluirse = capacidadDiluirse;
+            this.capDiluirse = capQuemarse;
         }
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public int getMasa() {
-        return masa;
-    }
-
-    public int getCapacidadQuemarse() {
-        return capacidadQuemarse;
-    }
-
-    public int getCapacidadDiluirse() {
-        return capacidadDiluirse;
-    }
-
-    public boolean isMovible() {
-        return movible;
+        this.movible = movible;
     }
 
     @Override
@@ -56,21 +35,19 @@ public class Material implements Comparable{
         return "Material{" +
                 "nombre='" + nombre + '\'' +
                 ", masa=" + masa +
-                ", capacidadQuemarse=" + capacidadQuemarse +
-                ", capacidadDiluirse=" + capacidadDiluirse +
+                ", capQuemarse=" + capQuemarse +
+                ", capDiluirse=" + capDiluirse +
                 ", movible=" + movible +
                 '}';
     }
 
     @Override
     public int compareTo(Object o) {
-        Material material = (Material) o;
+        Material other = (Material) o;
+        int res = 0;
 
-        if (material != null && this.masa < material.masa) {
-            return -1;
-        } else if (material != null && this.masa > material.masa) {
-            return 1;
-        }
-        return 0;
+        res = this.masa - other.masa;
+
+        return res;
     }
 }
