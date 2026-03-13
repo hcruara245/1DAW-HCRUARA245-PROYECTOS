@@ -14,7 +14,7 @@ public class EmpresaReparto {
         for (Vehiculo v : vehiculos){
             try {
                 v.cargar(Math.random() * 1000 + 1);
-            }catch (CargaExtendidaException exception){
+            }catch (CargaExtendidaException | CargaNegativaException exception){
                 System.out.println("Error al cargar vehiculo: CARGA EXCEDIDA");
             }
         }
@@ -23,7 +23,7 @@ public class EmpresaReparto {
         for (Vehiculo v : vehiculos){
             try {
                 v.cargar(-250);
-            } catch (CargaNegativaException exception) {
+            } catch (CargaNegativaException | CargaExtendidaException exception) {
                 System.out.println("Error al cargar vehiculo: CARGA NEGATIVA");
             }
         }
