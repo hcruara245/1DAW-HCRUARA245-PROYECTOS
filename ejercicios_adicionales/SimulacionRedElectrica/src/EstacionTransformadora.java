@@ -17,6 +17,7 @@ public class EstacionTransformadora extends ComponenteDeRed implements Transmiti
                 ", prioridad: " + prioridad;
     }
 
+    /*SIN ACABAR*/
     @Override
     public void transferirEnergiaCon(ComponenteDeRed c) {
         System.out.println();

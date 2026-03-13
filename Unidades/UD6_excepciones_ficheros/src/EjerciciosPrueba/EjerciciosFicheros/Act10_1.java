@@ -1,9 +1,9 @@
-package EjerciciosPrueba.Act10;
+package EjerciciosPrueba.EjerciciosFicheros;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class MainAct10_1 {
+public class Act10_1 {
     public static void main(String[] args) {
         Integer num = 0;
         boolean cambiado = false;
