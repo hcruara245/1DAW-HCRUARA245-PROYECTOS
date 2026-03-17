@@ -1,0 +1,5 @@
+Ana Garcia,1DAW,8.5
+Carlos Lopez,2DAW,6.0
+Maria Fernandez,1DAW,9.2
+Pedro Martinez,2DAW,4.8
+Laura Sanchez,1DAW,7.5

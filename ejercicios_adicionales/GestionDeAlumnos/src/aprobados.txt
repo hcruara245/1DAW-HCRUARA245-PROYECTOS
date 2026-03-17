@@ -1,0 +1,4 @@
+Alumno{nombre='Ana Garcia', curso='1DAW', nota=8.5}
+Alumno{nombre='Carlos Lopez', curso='2DAW', nota=6.0}
+Alumno{nombre='Maria Fernandez', curso='1DAW', nota=9.2}
+Alumno{nombre='Laura Sanchez', curso='1DAW', nota=7.5}
