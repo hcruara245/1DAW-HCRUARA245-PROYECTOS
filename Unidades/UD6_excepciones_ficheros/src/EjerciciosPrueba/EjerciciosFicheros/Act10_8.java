@@ -1,16 +1,32 @@
 package EjerciciosPrueba.EjerciciosFicheros;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.*;
+import java.util.Scanner;
 
 public class Act10_8 {
     public static void main(String[] args) {
-        try {
-            FileReader fr = new FileReader("archivo.txt");
-            BufferedReader br = new BufferedReader(fr);
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("DIME EL NOMBRE DEL FICHERO: ");
+        String nomarchivo = sc.nextLine();
+
+        try (Scanner scread = new Scanner(new File(nomarchivo));
+             BufferedWriter bw = new BufferedWriter(new FileWriter("copia_de_" + nomarchivo))) {
+
+            while (scread.hasNextLine()) {
+                String line = scread.nextLine();
+                bw.write(line);
+                bw.newLine();
+            }
+
+            System.out.println("Copia finalizada con éxito.");
+
         } catch (FileNotFoundException e) {
-            System.out.println("NO EXISTE EL ARCHIVO");
+            System.out.println("ERROR: No se encontró el archivo de origen.");
+        } catch (IOException e) {
+            System.out.println("ERROR: Fallo al escribir en el nuevo archivo.");
+        } finally {
+            sc.close();
         }
     }
 }
