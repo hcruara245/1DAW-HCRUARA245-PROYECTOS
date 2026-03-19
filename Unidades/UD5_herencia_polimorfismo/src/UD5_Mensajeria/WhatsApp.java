@@ -1,13 +1,13 @@
 package UD5_Mensajeria;
 
-public class WhatsAPP extends Mensaje{
+public class WhatsApp extends Mensaje implements Enviable{
 
-    public WhatsAPP(String contenido, String destinatario, boolean enviado) {
-        super(contenido, destinatario, enviado);
+    public WhatsApp(String destinatario, String contenido) {
+        super(contenido, destinatario, false);
     }
 
     @Override
-    public boolean validarDestino() {
+    public boolean validarDestinatario() {
         boolean valido = true;
 
         if (super.destinatario.length() != 9){
@@ -37,5 +37,10 @@ public class WhatsAPP extends Mensaje{
         }
 
         return resultado;
+    }
+
+    @Override
+    public void enviar() {
+        super.enviado = true;
     }
 }

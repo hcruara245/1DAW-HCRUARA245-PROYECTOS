@@ -4,6 +4,7 @@
  */
 package UD5_Mensajeria;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class PruebaMensajes {
@@ -29,9 +30,9 @@ public class PruebaMensajes {
             System.out.println("¿Desea enviar un nuevo mensaje? S/N");
         }
         
-        //enviarMensajes();
+        enviarMensajes();
         
-        //mostrarMensajesEnviados();
+        mostrarMensajesEnviados();
 
     }
     
@@ -45,7 +46,7 @@ public class PruebaMensajes {
         String asunto = sc.next();
         System.out.println("Introduce el contenido del email");
         String contenido = sc.next();
-        //anadirMensaje(new Email(destinatario,asunto,contenido));
+        anadirMensaje(new Email(destinatario,asunto,contenido));
     }
 
     private static void crearWhatsApp() {
@@ -54,13 +55,37 @@ public class PruebaMensajes {
         String destinatario = sc.next();
         System.out.println("Introduce el contenido del whatsApp");
         String contenido = sc.next();
-        //anadirMensaje(new WhatsApp(destinatario,contenido));
+        anadirMensaje(new WhatsApp(destinatario,contenido));
     }
 
     private static void crearPosIt() {
        Scanner sc = new Scanner (System.in);
         System.out.println("Qué quieres poner en el posIt");
         String contenido = sc.next();
-        //anadirMensaje(new PosIt(contenido));
+        anadirMensaje(new PosIt(contenido));
+    }
+
+    private static void anadirMensaje(Mensaje mensaje) {
+        if (mensajes == null) {
+            mensajes = new Mensaje[0];
+        }
+        mensajes = Arrays.copyOf(mensajes, mensajes.length + 1);
+        mensajes[mensajes.length - 1] = mensaje;
+    }
+
+    private static void enviarMensajes() {
+        for (Mensaje mensaje : mensajes) {
+            if (mensaje instanceof Enviable && mensaje.validarDestinatario()) {
+                ((Enviable) mensaje).enviar();
+            }
+        }
+    }
+
+    private static void mostrarMensajesEnviados(){
+        for (Mensaje mensaje : mensajes) {
+            if (mensaje.isEnviado()) {
+                System.out.println(mensaje);
+            }
+        }
     }
 }

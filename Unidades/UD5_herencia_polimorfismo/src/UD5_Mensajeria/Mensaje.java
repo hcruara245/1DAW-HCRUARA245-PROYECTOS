@@ -11,5 +11,14 @@ public abstract class Mensaje {
         this.enviado = enviado;
     }
 
-    public abstract boolean validarDestino();
+    public abstract boolean validarDestinatario();
+
+    @Override
+    public String toString() {
+        return "MENSAJE: " + contenido + " DESTINATARIO: " + destinatario + " ? ENVIADO: " + enviado;
+    }
+
+    public boolean isEnviado() {
+        return enviado;
+    }
 }
