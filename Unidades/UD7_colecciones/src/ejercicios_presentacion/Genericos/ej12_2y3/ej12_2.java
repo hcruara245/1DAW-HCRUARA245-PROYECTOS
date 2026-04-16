@@ -1,6 +1,4 @@
-package ejercicios_presentacion.Genericos.ej12_2;
-
-import ejercicios_presentacion.ListySet.packgejercicio12_11.Socio;
+package ejercicios_presentacion.Genericos.ej12_2y3;
 
 public class ej12_2 {
     public static void main(String[] args) {
@@ -48,5 +46,10 @@ public class ej12_2 {
 
         c3.ordenarTabla();
         System.out.println(c3);
+
+        System.out.println("\n=================== \n");
+        Contenedor contenedorPila = new Contenedor();
+        contenedorPila.apilar();
+        contenedorPila.vaciar();
     }
 }

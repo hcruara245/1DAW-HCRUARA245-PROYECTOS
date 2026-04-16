@@ -1,8 +1,9 @@
-package ejercicios_presentacion.Genericos.ej12_2;
+package ejercicios_presentacion.Genericos.ej12_2y3;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
-public class Contenedor<T> {
+public class Contenedor<T> implements Pila<T> {
     private T[] tabla;
 
     public Contenedor() {
@@ -54,6 +55,28 @@ public class Contenedor<T> {
             Arrays.sort(tabla);
         } catch (ClassCastException e) {
             System.out.println("NO SE PUEDE ORDENAR CORRECTAMENTE");
+        }
+    }
+
+    @Override
+    public void apilar() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("VAMOS A APILAR");
+        Integer valor = 0;
+        do {
+            System.out.print("INGRESA NUMERO: ");
+            valor = sc.nextInt();
+            if (valor >= 0) {
+                insertarAlPrincipio((T) valor);
+            }
+        } while (valor >= 0);
+    }
+
+    @Override
+    public void vaciar() {
+        for (int i = 0; i < this.tabla.length; i++) {
+            System.out.println(this.tabla[i]);
+            tabla[i] = null;
         }
     }
 }

@@ -1,4 +1,4 @@
-package ejercicios_presentacion.Genericos.ej12_2;
+package ejercicios_presentacion.Genericos.ej12_2y3;
 
 public class Ejemplo {
     private String textoejemplo;
