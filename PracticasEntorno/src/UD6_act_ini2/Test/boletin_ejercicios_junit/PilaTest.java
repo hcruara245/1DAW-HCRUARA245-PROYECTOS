@@ -41,6 +41,27 @@ class PilaTest {
     }
 
     @Test
+    void testPush3() {
+        // LA PILA YA TIENE DOS ELEMENTOS
+        pila.push("A");
+        pila.push("B");
+
+        // METO OTROS DOS
+        String nuevo1 = "C";
+        String nuevo2 = "D";
+        pila.push(nuevo1);
+        pila.push(nuevo2);
+
+        assertAll(
+                () -> assertFalse(pila.isEmpty(), "La pila no debería estar vacía"),
+                () -> assertEquals(4, pila.size(), "La pila debería tener 4 elementos"),
+                () -> assertEquals(nuevo2, pila.peek(), "El último elemento insertado debería estar en la cima")
+        );
+
+    }
+
+
+    @Test
     void testPop() {
         pila.push("A");
         pila.push("B");
