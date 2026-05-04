@@ -12,21 +12,41 @@ public class pruebaEmpleados {
                 new Empleado(7, "Elena Vega", "RRHH", 26000, 3),
                 new Empleado(8, "Tomas Gil", "IT", 61000, 10)
         ));
+
         // ■■ EJERCICIO 1 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
         // Apartado 1a: ...
+
         Set<String> departamentosUnicos = new HashSet<>();
         Iterator<Empleado> it = empleados.iterator();
         while (it.hasNext()) {
             departamentosUnicos.add(it.next().getDepartamento());
         }
         System.out.println("Departamentos: " + departamentosUnicos);
+
         // Apartado 1b: ...
+
         Map<String,List<Empleado>> empleadosByDepartamento = new HashMap<>();
         Iterator<String> it2 = departamentosUnicos.iterator();
+
         while (it2.hasNext()) {
-            empleadosByDepartamento.put(it2.next(), new ArrayList<>());
+            List<Empleado> empleadosPorDepartamento = new ArrayList<>();
+            String departamento = it2.next();
+            for(Empleado empleado : empleados) {
+                if(empleado.getDepartamento().equals(departamento)) {
+                    empleadosPorDepartamento.add(empleado);
+                }
+            }
+            empleadosByDepartamento.put(departamento,empleadosPorDepartamento);
         }
+        System.out.println("Empleados: " + empleadosByDepartamento);
+
         // Apartado 1c: ...
+
+        Iterator<String> it3 = departamentosUnicos.iterator();
+        while (it3.hasNext()) {
+            departamentosUnicos.removeIf(departamento -> departamento.length() < 4);
+        }
+
         // Apartado 1d: ...
         // Apartado 1e: ...
         // ■■ EJERCICIO 2 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
