@@ -8,6 +8,7 @@ public class Gestion_Eventos {
         calcularFechaFinal(30,12,2023,10);
         calcularFechaFinal(31,12,2023,10);
         calcularFechaFinal(1,1,2023,364);
+        calcularFechaFinal(20,12,2023,364);
     }
 
     public static void calcularFechaFinal(int dia,int mes,int anio, int num_dias){
@@ -20,12 +21,15 @@ public class Gestion_Eventos {
         if (dia <= 0 || dia > 31){
             dia = 1;
         }
+
         if (mes <= 0  || mes > 12){
             mes = 1;
         }
+
         if (anio <= 0){
             anio = 1;
         }
+
         if (num_dias <= 0){
             num_dias = 1;
         }

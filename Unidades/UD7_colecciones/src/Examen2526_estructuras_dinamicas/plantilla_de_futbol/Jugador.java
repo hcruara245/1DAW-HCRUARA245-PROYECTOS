@@ -1,5 +1,7 @@
 package Examen2526_estructuras_dinamicas.plantilla_de_futbol;
 
+import java.util.Objects;
+
 enum Posicion{
     portero,defensa,medio,delantero
 }
@@ -46,5 +48,16 @@ public class Jugador implements  Comparable<Jugador>{
     @Override
     public int compareTo(Jugador o) {
         return this.DNI.compareTo(o.DNI);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Jugador jugador)) return false;
+        return Objects.equals(getDNI(), jugador.getDNI()) && Objects.equals(getNombre(), jugador.getNombre());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getDNI(), getNombre());
     }
 }
