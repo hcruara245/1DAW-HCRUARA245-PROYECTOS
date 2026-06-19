@@ -41,6 +41,8 @@ public class PruebaCiudades {
         ciudades.stream()
                 .filter(Ciudad::isVisitado)
                 .filter(ciudad -> ciudad.getHabitantes() > 2000000)
+                .map(Ciudad::getNombre)
+                .sorted(String::compareTo)
                 .forEach(System.out::println);
 
         // apartado f:
